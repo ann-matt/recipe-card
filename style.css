@@ -71,33 +71,35 @@ td {
     border-radius: 15px;
     max-width: 680px;
     margin: 2rem auto;
-    position: relative;
     
 }
 .hidden-pic {
     position: absolute;
-    top: 10rem;
+    top: 3rem;
     left: 1rem;
     width: 150px;
     height: 150px;
+    z-index: 1;
+    object-fit: contain;
+    pointer-events: none;
 }
 .main-pic {
     position: relative;
     width: 100vw;
     max-width: 680px;
-    
     margin: auto;
-    z-index: 111;
-    
 }
-.main-pic img {
+.main-pic--unhidden {
     margin-bottom: 3rem;
     width: 100%;
     border-radius: 15px 15px 0 0;
     transition: ease-out .4s;
+    z-index: 111;
+    display: block;
+    position: relative;
 
 }
-.main-pic img:hover {
+.main-pic--unhidden:hover {
     transform:rotate(30deg);
 }
 .main-info__title {
